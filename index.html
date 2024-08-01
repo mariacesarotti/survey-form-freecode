@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Mapeamento da Diversidade: Tendências e Desafios na Tecnologia</title>
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+    <header>
+        <h1 id="title" class="title">Mapeamento da Diversidade</h1>
+        <h2>Tendências e Desafios na Tecnologia</h2>
+    </header>
+    <main>
+        <form method="post" id="survey-form" class="container">
+            <fieldset>
+                <legend>Identidade de Gênero</legend>
+                <div class="radio-group">
+                    <input type="radio" id="feminino" name="identidade-genero" value="feminino">
+                    <label for="feminino">Feminino</label>
+                    <input type="radio" id="masculino" name="identidade-genero" value="masculino">
+                    <label for="masculino">Masculino</label>
+                    <input type="radio" id="nao-binario" name="identidade-genero" value="nao-binario">
+                    <label for="nao-binario">Não-binário</label>
+                    <input type="radio" id="nao-dizer" name="identidade-genero" value="nao-dizer" checked>
+                    <label for="nao-dizer">Prefiro não dizer</label>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Origem Racial ou Étnica</legend>
+                <div class="checkbox-group">
+                    <input type="checkbox" name="racial-etnica" id="afro-brasileira" value="afro-brasileira"/>
+                    <label for="afro-brasileira">Afro-brasileira</label>
+                    <input type="checkbox" name="racial-etnica" id="oriental" value="oriental"/>
+                    <label for="oriental">Oriental</label>
+                    <input type="checkbox" name="racial-etnica" id="branca" value="branca"/>
+                    <label for="branca">Branca</label>
+                    <input type="checkbox" name="racial-etnica" id="indigena" value="indigena"/>
+                    <label for="indigena">Indígena</label>
+                    <input type="checkbox" name="racial-etnica" id="parda" value="parda"/>
+                    <label for="parda">Parda</label>
+                    <label for="outra">Outra</label>
+                    <input type="text" name="racial-etnica" id="outra" placeholder="Especificar aqui"/>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Cargo Atual</legend>
+                <div class="select-group">
+                    <label for="cargo-atual">Escolha seu cargo atual</label>
+                    <select id="cargo-atual" name="cargo-atual">
+                        <option value="escolha aqui" class="gray" disabled selected>Escolha aqui</option>
+                        <option value="pessoa-engenheira-software">Pessoa Engenheira de Software</option>
+                        <option value="analista-dados">Analista de Dados</option>
+                        <option value="pessoa-desenvolvedora-web">Pessoa Desenvolvedora Web</option>
+                        <option value="designer-ui-ux">Designer UI/UX</option>
+                        <option value="gerente-de-projetos">Gerente de Projetos</option>
+                    </select>
+                    <label for="outra-cargo">Outra</label>
+                    <input type="text" name="cargo-atual" id="outra-cargo" placeholder="Especificar aqui"/>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Escala de 0 a 10</legend>
+                <div class="slider-group">
+                    <label for="scale1">Quão inclusiva você percebe a indústria de tecnologia como um todo?</label>
+                    <input type="range" id="scale1" name="scale1" min="0" max="10" class="slider"/>
+                    <span id="resultado"></span>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Iniciativas de Diversidade</legend>
+                <p>Defina pesos de importância e efetividade (de 0 a 5) para cada uma dessas iniciativas:</p>
+                <div class="slider-group">
+                    <label for="scale2">Programas de mentoria para grupos sub-representados</label>
+                    <input type="range" id="scale2" name="scale2" min="0" max="5" class="slider"/>
+                    <span id="resultado2"></span>
+                </div>
+                <div class="slider-group">
+                    <label for="scale3">Esforços de recrutamento de diversidade</label>
+                    <input type="range" id="scale3" name="scale3" min="0" max="5" class="slider"/>
+                    <span id="resultado3"></span>
+                </div>
+                <div class="slider-group">
+                    <label for="scale4">Grupos de recursos para funcionários (ERGs)</label>
+                    <input type="range" id="scale4" name="scale4" min="0" max="5" class="slider"/>
+                    <span id="resultado4"></span>
+                </div>
+                <div class="slider-group">
+                    <label for="scale5">Diretrizes de linguagem e comunicação inclusivas</label>
+                    <input type="range" id="scale5" name="scale5" min="0" max="5" class="slider"/>
+                    <span id="resultado5"></span>
+                </div>
+                <div class="slider-group">
+                    <label for="scale6">Auditorias de equidade salarial e medidas de transparência</label>
+                    <input type="range" id="scale6" name="scale6" min="0" max="5" class="slider"/>
+                    <span id="resultado6"></span>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Barreiras para a Diversidade</legend>
+                <p>Quais são as barreiras mais significativas para alcançar diversidade e inclusão em tecnologia?</p>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="cargos-lideranca" name="barreiras" value="cargos-lideranca">
+                    <label for="cargos-lideranca">Falta de diversidade em cargos de liderança</label>
+                    <input type="checkbox" id="politicas-rh" name="barreiras" value="politicas-rh">
+                    <label for="politicas-rh">Políticas e procedimentos de RH insuficientes</label>
+                    <input type="checkbox" id="vies" name="barreiras" value="vies">
+                    <label for="vies">Viés inconsciente nos processos de contratação</label>
+                    <input type="checkbox" id="normas-culturais" name="barreiras" value="normas-culturais">
+                    <label for="normas-culturais">Normas culturais e estereótipos</label>
+                </div>
+            </fieldset>
+            <input id="submit" type="submit" value="Enviar"/>
+        </form>
+    </main>
+    <script>
+        document.querySelectorAll('.slider-group input[type="range"]').forEach(slider => {
+            let output = slider.nextElementSibling;
+            output.textContent = slider.value;
+            slider.oninput = function() {
+                output.textContent = this.value;
+            }
+        });
+    </script>
+</body>
+</html>
